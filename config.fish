@@ -2,7 +2,10 @@ if status is-interactive
     fish_vi_key_bindings
     bind -M insert -m default jk backward-char force-repaint
     set -g EDITOR "nvim"
-    fish_add_path -m "/opt/homebrew/bin"
+
+    # Ports
+    fish_add_path -m "/opt/local/bin"
+    fish_add_path -m "/opt/local/sbin"
 
     alias ll='ls -l'
     alias vi='vim'
@@ -16,9 +19,6 @@ if status is-interactive
 
     # Node 
     set --universal nvm_default_version v18.17.0
-
-    # Ruby
-    fish_add_path "/opt/homebrew/opt/ruby@2.7/bin"
 
     # Python
     set -g PYENV_ROOT "$HOME/.pyenv"
